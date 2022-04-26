@@ -8,6 +8,7 @@ import {
   Button,
   Alert,
   Platform,
+  SafeAreaView,
 } from 'react-native'
 
 const Login = () => {
@@ -24,7 +25,7 @@ const Login = () => {
   }
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Login</Text>
       <View styles={styles.body}>
         <Text style={styles.text}>Usuário</Text>
@@ -51,7 +52,7 @@ const Login = () => {
         />
         <Button style={styles.button} title="Voltar" />
       </View>
-    </View>
+    </SafeAreaView>
   )
 }
 
