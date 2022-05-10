@@ -10,7 +10,7 @@ import {
 } from 'react-native'
 import api from '../../apiGithub'
 
-export default function Home() {
+export default function Home({ navigation }) {
   const [repositores, setRepositores] = useState([])
 
   const _loadingRepositores = async () => {
@@ -26,7 +26,8 @@ export default function Home() {
       const response = await api.get(`/users/${userLogin}/repos`)
       const followers = response.data.length
 
-      Alert.alert(userLogin, `Repositórios: ${followers}`)
+      // Alert.alert(userLogin, `Repositórios: ${followers}`)
+      navigation.navigate('Details')
     } catch (error) {
       console.error('Error on _viewDetails', error)
     }
