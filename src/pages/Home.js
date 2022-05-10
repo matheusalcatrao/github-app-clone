@@ -39,7 +39,6 @@ export default function Home({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Repositórios do GitHub</Text>
       <FlatList
         data={repositores}
         keyExtractor={(item) => item.id}
